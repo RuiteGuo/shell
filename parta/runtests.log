@@ -1,0 +1,583 @@
+starting build
+
+**********************************************************************
+
+Test build
+build project using make
+
+**********************************************************************
+Trying to clean project using make clean
+make clean
+make: *** No rule to make target 'clean'.  Stop.
+Trying to build project using make
+make
+make: *** No targets specified and no makefile found.  Stop.
+gcc mysh.c -o mysh -Wall -std=gnu11
+
+
+test build PASSED
+ (build project using make)
+ file 'mysh' exists after make clean, removing
+
+starting exit
+
+**********************************************************************
+
+Test exit
+run exit
+
+**********************************************************************
+/tmp/tmpnKGAq4/p/./mysh
+
+
+test exit PASSED (5 of 5)
+ (run exit)
+
+starting exec
+
+**********************************************************************
+
+Test exec
+path should be /bin
+
+**********************************************************************
+/tmp/tmpnKGAq4/p/./mysh
+
+
+test exec PASSED (5 of 5)
+ (path should be /bin)
+
+starting badexec
+
+**********************************************************************
+
+Test badexec
+run programs that do not exist in /bin
+
+**********************************************************************
+/tmp/tmpnKGAq4/p/./mysh
+
+
+test badexec PASSED (3 of 3)
+ (run programs that do not exist in /bin)
+
+starting stress
+
+**********************************************************************
+
+Test stress
+stress testing the shell with large number of commands
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/2a/ctests/stress/gen -s 1 -n 10000
+/tmp/tmpnKGAq4/p/./mysh
+
+
+test stress PASSED (2 of 2)
+ (stress testing the shell with large number of commands)
+
+starting line
+
+**********************************************************************
+
+Test line
+line with maximum allowed length
+
+**********************************************************************
+/tmp/tmpnKGAq4/p/./mysh
+
+
+test line PASSED (2 of 2)
+ (line with maximum allowed length)
+
+starting badline
+
+**********************************************************************
+
+Test badline
+a line that is too long
+
+**********************************************************************
+/tmp/tmpnKGAq4/p/./mysh
+
+
+test badline PASSED (2 of 2)
+ (a line that is too long)
+
+starting badarg
+
+**********************************************************************
+
+Test badarg
+extra argument to mysh
+
+**********************************************************************
+/tmp/tmpnKGAq4/p/./mysh /extra
+
+
+test badarg PASSED (2 of 2)
+ (extra argument to mysh)
+
+starting whitespace
+
+**********************************************************************
+
+Test whitespace
+leading and trailing whitespace, full whitespaces or empty string
+
+**********************************************************************
+/tmp/tmpnKGAq4/p/./mysh
+
+
+test whitespace PASSED (2 of 2)
+ (leading and trailing whitespace, full whitespaces or empty string)
+
+starting cd
+
+**********************************************************************
+
+Test cd
+cd with argument
+
+**********************************************************************
+/tmp/tmpnKGAq4/p/./mysh
+
+
+test cd PASSED (5 of 5)
+ (cd with argument)
+
+starting badcd
+
+**********************************************************************
+
+Test badcd
+cd to a bad directory
+
+**********************************************************************
+/tmp/tmpnKGAq4/p/./mysh
+
+
+test badcd PASSED (2 of 2)
+ (cd to a bad directory)
+
+starting badcd2
+
+**********************************************************************
+
+Test badcd2
+cd with 2 arguments
+
+**********************************************************************
+/tmp/tmpnKGAq4/p/./mysh
+
+
+test badcd2 PASSED (1 of 1)
+ (cd with 2 arguments)
+
+starting pwd
+
+**********************************************************************
+
+Test pwd
+run pwd
+
+**********************************************************************
+/tmp/tmpnKGAq4/p/./mysh
+
+
+test pwd PASSED (5 of 5)
+ (run pwd)
+
+starting badpwd
+
+**********************************************************************
+
+Test badpwd
+run pwd with extra argument
+
+**********************************************************************
+/tmp/tmpnKGAq4/p/./mysh
+
+
+test badpwd PASSED (1 of 1)
+ (run pwd with extra argument)
+
+starting rdr
+
+**********************************************************************
+
+Test rdr
+simple output redirection
+
+**********************************************************************
+/tmp/tmpnKGAq4/p/./mysh
+
+
+test rdr PASSED (5 of 5)
+ (simple output redirection)
+
+starting rdr2
+
+**********************************************************************
+
+Test rdr2
+simple input redirection
+
+**********************************************************************
+/tmp/tmpnKGAq4/p/./mysh
+
+
+test rdr2 PASSED (5 of 5)
+ (simple input redirection)
+
+starting badrdr
+
+**********************************************************************
+
+Test badrdr
+bad redirection format
+
+**********************************************************************
+/tmp/tmpnKGAq4/p/./mysh
+
+
+test badrdr PASSED (2 of 2)
+ (bad redirection format)
+
+starting badrdr2
+
+**********************************************************************
+
+Test badrdr2
+bad input redirection that redirects to invalid file
+
+**********************************************************************
+/tmp/tmpnKGAq4/p/./mysh
+
+
+test badrdr2 PASSED (2 of 2)
+ (bad input redirection that redirects to invalid file)
+
+starting rdr3
+
+**********************************************************************
+
+Test rdr3
+input and output redirection
+
+**********************************************************************
+/tmp/tmpnKGAq4/p/./mysh
+
+
+test rdr3 PASSED (4 of 4)
+ (input and output redirection)
+
+starting rdr4
+
+**********************************************************************
+
+Test rdr4
+another input and output redirection
+
+**********************************************************************
+/tmp/tmpnKGAq4/p/./mysh
+
+
+test rdr4 PASSED (3 of 3)
+ (another input and output redirection)
+
+starting rdr5
+
+**********************************************************************
+
+Test rdr5
+simple output redirection that overwrites existing file
+
+**********************************************************************
+/tmp/tmpnKGAq4/p/./mysh
+
+
+test rdr5 PASSED (2 of 2)
+ (simple output redirection that overwrites existing file)
+
+starting whitespace2
+
+**********************************************************************
+
+Test whitespace2
+input and output redirection with more than one whitespace between tokens
+
+**********************************************************************
+/tmp/tmpnKGAq4/p/./mysh
+
+
+test whitespace2 PASSED (1 of 1)
+ (input and output redirection with more than one whitespace between tokens)
+
+starting pipe
+
+**********************************************************************
+
+Test pipe
+simple pipeline
+
+**********************************************************************
+/tmp/tmpnKGAq4/p/./mysh
+
+
+test pipe PASSED (5 of 5)
+ (simple pipeline)
+
+starting pipe2
+
+**********************************************************************
+
+Test pipe2
+simple pipeline 2
+
+**********************************************************************
+/tmp/tmpnKGAq4/p/./mysh
+
+
+test pipe2 PASSED (4 of 4)
+ (simple pipeline 2)
+
+starting pipe3
+
+**********************************************************************
+
+Test pipe3
+simple pipeline 3
+
+**********************************************************************
+/tmp/tmpnKGAq4/p/./mysh
+
+
+test pipe3 PASSED (4 of 4)
+ (simple pipeline 3)
+
+starting badpipe
+
+**********************************************************************
+
+Test badpipe
+bad pipeline that has invalid command
+
+**********************************************************************
+/tmp/tmpnKGAq4/p/./mysh
+
+
+test badpipe PASSED (2 of 2)
+ (bad pipeline that has invalid command)
+
+starting badpipe2
+
+**********************************************************************
+
+Test badpipe2
+bad pipeline with no commands followed
+
+**********************************************************************
+/tmp/tmpnKGAq4/p/./mysh
+
+
+test badpipe2 PASSED (1 of 1)
+ (bad pipeline with no commands followed)
+
+starting bg
+
+**********************************************************************
+
+Test bg
+simple background execution
+
+**********************************************************************
+/tmp/tmpnKGAq4/p/./mysh
+
+
+test bg PASSED (5 of 5)
+ (simple background execution)
+
+starting bg2
+
+**********************************************************************
+
+Test bg2
+check zombie processes
+
+**********************************************************************
+/tmp/tmpnKGAq4/p/./mysh
+
+
+test bg2 PASSED (4 of 4)
+ (check zombie processes)
+
+starting bg3
+
+**********************************************************************
+
+Test bg3
+check if all child processes are terminated after exit
+
+**********************************************************************
+/tmp/tmpnKGAq4/p/./mysh
+
+
+test bg3 PASSED (3 of 3)
+ (check if all child processes are terminated after exit)
+
+starting bgstress
+
+**********************************************************************
+
+Test bgstress
+stress test with multiple background jobs
+
+**********************************************************************
+/tmp/tmpnKGAq4/p/./mysh
+
+
+test bgstress PASSED (2 of 2)
+ (stress test with multiple background jobs)
+
+starting bgrdr
+
+**********************************************************************
+
+Test bgrdr
+background execution + redirection
+
+**********************************************************************
+/tmp/tmpnKGAq4/p/./mysh
+
+
+test bgrdr PASSED (4 of 4)
+ (background execution + redirection)
+
+starting valgrindtest
+
+**********************************************************************
+
+Test valgrindtest
+Valgrind test for memory management
+
+**********************************************************************
+Running valgrind
+/usr/bin/valgrind --show-reachable=yes --xml=yes --child-silent-after-fork=yes --undef-value-errors=no --xml-file=/tmp/tmpnKGAq4/p/vg_summary.xml ./mysh
+mysh (1)> /tmp/tmpnKGAq4/p
+mysh (2)> Thu Oct 12 16:35:07 CDT 2017
+mysh (3)> mysh (4)>   8  32 247
+mysh (5)> LINUX
+mysh (6)> ls: cannot access '/bad': No such file or directory
+mysh (7)> mysh (8)> mysh (8)> mysh (9)> /afs/cs.wisc.edu/u
+mysh (10)> Valgrind completed in 0.361728906631 seconds
+
+
+test valgrindtest PASSED (5 of 5)
+ (Valgrind test for memory management)
+
+**********************************************************************
+Summary:
+test build PASSED
+ (build project using make)
+ file 'mysh' exists after make clean, removing
+
+test exit PASSED (5 of 5)
+ (run exit)
+
+test exec PASSED (5 of 5)
+ (path should be /bin)
+
+test badexec PASSED (3 of 3)
+ (run programs that do not exist in /bin)
+
+test stress PASSED (2 of 2)
+ (stress testing the shell with large number of commands)
+
+test line PASSED (2 of 2)
+ (line with maximum allowed length)
+
+test badline PASSED (2 of 2)
+ (a line that is too long)
+
+test badarg PASSED (2 of 2)
+ (extra argument to mysh)
+
+test whitespace PASSED (2 of 2)
+ (leading and trailing whitespace, full whitespaces or empty string)
+
+test cd PASSED (5 of 5)
+ (cd with argument)
+
+test badcd PASSED (2 of 2)
+ (cd to a bad directory)
+
+test badcd2 PASSED (1 of 1)
+ (cd with 2 arguments)
+
+test pwd PASSED (5 of 5)
+ (run pwd)
+
+test badpwd PASSED (1 of 1)
+ (run pwd with extra argument)
+
+test rdr PASSED (5 of 5)
+ (simple output redirection)
+
+test rdr2 PASSED (5 of 5)
+ (simple input redirection)
+
+test badrdr PASSED (2 of 2)
+ (bad redirection format)
+
+test badrdr2 PASSED (2 of 2)
+ (bad input redirection that redirects to invalid file)
+
+test rdr3 PASSED (4 of 4)
+ (input and output redirection)
+
+test rdr4 PASSED (3 of 3)
+ (another input and output redirection)
+
+test rdr5 PASSED (2 of 2)
+ (simple output redirection that overwrites existing file)
+
+test whitespace2 PASSED (1 of 1)
+ (input and output redirection with more than one whitespace between tokens)
+
+test pipe PASSED (5 of 5)
+ (simple pipeline)
+
+test pipe2 PASSED (4 of 4)
+ (simple pipeline 2)
+
+test pipe3 PASSED (4 of 4)
+ (simple pipeline 3)
+
+test badpipe PASSED (2 of 2)
+ (bad pipeline that has invalid command)
+
+test badpipe2 PASSED (1 of 1)
+ (bad pipeline with no commands followed)
+
+test bg PASSED (5 of 5)
+ (simple background execution)
+
+test bg2 PASSED (4 of 4)
+ (check zombie processes)
+
+test bg3 PASSED (3 of 3)
+ (check if all child processes are terminated after exit)
+
+test bgstress PASSED (2 of 2)
+ (stress test with multiple background jobs)
+
+test bgrdr PASSED (4 of 4)
+ (background execution + redirection)
+
+test valgrindtest PASSED (5 of 5)
+ (Valgrind test for memory management)
+
+Passed 33 of 33 tests.
+Overall 33 of 33
+Points 100 of 100

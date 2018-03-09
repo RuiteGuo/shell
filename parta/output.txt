@@ -1,0 +1,8 @@
+input
+input2
+mysh
+mysh.c
+output.txt
+run
+runtests.log
+vg_summary.xml

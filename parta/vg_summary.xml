@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+
+<valgrindoutput>
+
+<protocolversion>4</protocolversion>
+<protocoltool>memcheck</protocoltool>
+
+<preamble>
+  <line>Memcheck, a memory error detector</line>
+  <line>Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.</line>
+  <line>Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info</line>
+  <line>Command: ./mysh</line>
+</preamble>
+
+<pid>21767</pid>
+<ppid>21766</ppid>
+<tool>memcheck</tool>
+
+<args>
+  <vargv>
+    <exe>/usr/bin/valgrind.bin</exe>
+    <arg>--show-reachable=yes</arg>
+    <arg>--xml=yes</arg>
+    <arg>--child-silent-after-fork=yes</arg>
+    <arg>--undef-value-errors=no</arg>
+    <arg>--xml-file=/tmp/tmpEldH0p/p/vg_summary.xml</arg>
+  </vargv>
+  <argv>
+    <exe>./mysh</exe>
+  </argv>
+</args>
+
+<status>
+  <state>RUNNING</state>
+  <time>00:00:00:00.069 </time>
+</status>
+
+<error>
+  <unique>0x0</unique>
+  <tid>1</tid>
+  <kind>InvalidRead</kind>
+  <what>Invalid read of size 4</what>
+  <stack>
+    <frame>
+      <ip>0x401241</ip>
+      <obj>/tmp/tmpEldH0p/p/mysh</obj>
+      <fn>detect_exit_cd_pwd_newline</fn>
+    </frame>
+    <frame>
+      <ip>0x402047</ip>
+      <obj>/tmp/tmpEldH0p/p/mysh</obj>
+      <fn>create_child</fn>
+    </frame>
+    <frame>
+      <ip>0x40256C</ip>
+      <obj>/tmp/tmpEldH0p/p/mysh</obj>
+      <fn>main</fn>
+    </frame>
+  </stack>
+  <auxwhat>Address 0x5204090 is 0 bytes after a block of size 80 alloc'd</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2DB8F</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>malloc</fn>
+    </frame>
+    <frame>
+      <ip>0x402343</ip>
+      <obj>/tmp/tmpEldH0p/p/mysh</obj>
+      <fn>main</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x7</unique>
+  <tid>1</tid>
+  <kind>InvalidRead</kind>
+  <what>Invalid read of size 4</what>
+  <stack>
+    <frame>
+      <ip>0x401261</ip>
+      <obj>/tmp/tmpEldH0p/p/mysh</obj>
+      <fn>detect_exit_cd_pwd_newline</fn>
+    </frame>
+    <frame>
+      <ip>0x402047</ip>
+      <obj>/tmp/tmpEldH0p/p/mysh</obj>
+      <fn>create_child</fn>
+    </frame>
+    <frame>
+      <ip>0x40256C</ip>
+      <obj>/tmp/tmpEldH0p/p/mysh</obj>
+      <fn>main</fn>
+    </frame>
+  </stack>
+  <auxwhat>Address 0x52040a8 is 24 bytes after a block of size 80 in arena "client"</auxwhat>
+</error>
+
+
+<status>
+  <state>FINISHED</state>
+  <time>00:00:00:00.457 </time>
+</status>
+
+<errorcounts>
+  <pair>
+    <count>10</count>
+    <unique>0x0</unique>
+  </pair>
+  <pair>
+    <count>2</count>
+    <unique>0x7</unique>
+  </pair>
+</errorcounts>
+
+<suppcounts>
+</suppcounts>
+
+</valgrindoutput>
+
